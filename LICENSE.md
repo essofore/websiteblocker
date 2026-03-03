@@ -13,4 +13,6 @@
 
 5. **GOVERNING LAW**. This agreement and your use of the Software are governed by the laws of the State of Washington, USA.
 
+6. **PRIVACY**. The Software does not collect, transmit, or store any personal data or browsing history. All configuration settings and logs remain strictly local to your device.
+
 **PLEASE DO NOT USE THE SOFTWARE IF YOU DO NOT AGREE TO THESE TERMS.**

@@ -84,6 +84,7 @@ Notes:
 - Permission errors: Ensure you’re running as Administrator.
 - No rules take effect: Verify domains resolve to IPs and that the current local time falls outside allowed windows.
 - Network adapters/VPNs: Rules are IP‑based; policy refresh (default every 5 minutes when blocked) updates to new IPs over time.
+- Some security or antivirus software may stop WebsiteBlocker from working because it modifies your system settings.Please let us know if this happens.
 
 ## Escape Hatch (SOS)
 
