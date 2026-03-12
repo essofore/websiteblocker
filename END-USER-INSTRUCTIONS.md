@@ -4,7 +4,7 @@ This guide explains how to install and run `WebsiteBlocker` on Windows from the 
 You will need to use the terminal (console) and enter commands to do this. We do not provide any GUI.
 
 ## What It Does
-- Periodically evaluates your `config.yaml` and applies Windows Firewall rules to block domains outside the configured time windows.
+- Periodically evaluates your `config.yaml` and applies Windows Firewall rules to block domains **outside** the configured time windows i.e., the time-windows are a whitelist or _allowlist_ when you are allowed to access the websites.
 - On startup, clears previously managed rules (default). On graceful shutdown, clears rules (default).
 
 ## What’s in the ZIP
@@ -89,10 +89,11 @@ Notes:
 ## Escape Hatch (SOS)
 
 This is a self-help tool, not a lockbox. You can bypass it anytime — we even show you how. The goal is to make the healthy choice easier, not to take away control.
-You have two options:
+You have several jailbreak options:
 
 1. **Easiest**: Stop the service by running `sc stop WebsiteBlocker` from an **elevated Command Prompt**. This will remove all protections put in place by the program.
-2. If previous option does not work, as fallback you can run `sos-kill-switch.ps1` from **elevated PowerShell prompt** as follows:
+2. Edit `config.yaml`. The service automatically reloads when the file timestamp changes (evaluates roughly every 60 seconds).
+3. As last resort, you can run `sos-kill-switch.ps1` from **elevated PowerShell prompt** as follows:
 
 ```
 .\scripts\sos-kill-switch.ps1 -RulePrefix "SiteTimeGate:" -ServiceName "WebsiteBlocker"
@@ -103,5 +104,9 @@ If Powershell refuses to run the script, run:
 ```
 Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 ```
+
+## I don't want to be able to bypass the tool
+
+Give admin access of the computer and the `config.yaml` file to someone else. This will prevent you from "cheating" and at same time have a SOS option.
 
 ## [Questions?](https://github.com/essofore/websiteblocker/issues)
