@@ -4,7 +4,7 @@ This guide explains how to install and run `WebsiteBlocker` on Windows from the 
 You will need to use the terminal (console) and enter commands to do this. We do not provide any GUI.
 
 ## What It Does
-- Periodically evaluates your `config.yaml` and applies Windows Firewall rules to block domains **outside** the configured time windows i.e., the time-windows are a whitelist or _allowlist_ when you are allowed to access the websites.
+- Periodically evaluates your `config.yaml` and applies Windows Firewall rules to block domains **outside** the configured time windows.
 - On startup, clears previously managed rules (default). On graceful shutdown, clears rules (default).
 
 ## What’s in the ZIP
@@ -107,6 +107,7 @@ Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
 
 ## I don't want to be able to bypass the tool
 
-Give admin access of the computer and the `config.yaml` file to someone else. This will prevent you from "cheating" and at same time have a SOS option.
+Give admin access of the computer and the `config.yaml` file to someone you trust.
+You lose the ability to bypass the tool, but they can still rescue you in an emergency.
 
 ## [Questions?](https://github.com/essofore/websiteblocker/issues)
